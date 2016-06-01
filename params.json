@@ -1,0 +1,6 @@
+{
+  "name": "Diff",
+  "tagline": "cmd diff algorithm",
+  "body": "# diff\r\n### Linux命令 diff\r\nLinux中，我们常常用 diff 来比较两个文本文件，特别是同一个文件修改前后的差异。   \r\n那么它的处理逻辑是什么样的，它的算法复杂度又如何？   \r\n\r\n我们知道，diff 比较的是文件每行的差异。为了简化问题的难度，我们假设每行都只有一个字母，于是一个文件就简化为一个字符串。我们来看看，命令 diff 是如何比较两个字符串的。   \r\n假设我们调用 diff 比较两个字符串\"string\" 和 \"strength\"，期待的效果如下：\r\n\r\n\t$ diff string strength\r\n\t| s\r\n\t| t\r\n\t| r\r\n\t- i\r\n\t+ e\r\n\t| n\r\n\t| g\r\n\t+ t\r\n\t+ h\r\n\r\n#### 1.算法复杂度为 O(mn)\r\n\r\npython实现：[diff_1.py](diff_1.py)\r\n\r\n#### 2.算法复杂度为 O(nd)\r\n\r\n#### 3.算法复杂度为 O(np)\r\n",
+  "note": "Don't delete this file! It's used internally to help with page regeneration."
+}
