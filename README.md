@@ -6,18 +6,22 @@ Linux中，我们常常用 diff 来比较两个文本文件，特别是同一个
 我们知道，diff 比较的是文件每行的差异。为了简化问题的难度，我们假设每行都只有一个字母，于是一个文件就简化为一个字符串。我们来看看，命令 diff 是如何比较两个字符串的。   
 假设我们调用 diff 比较两个字符串"string" 和 "strength"，期待的效果如下：
 
-	$ diff string strength
-	| s
-	| t
-	| r
-	- i
-	+ e
-	| n
-	| g
-	+ t
-	+ h
+```
+$ diff string strength
+| s
+| t
+| r
+- i
++ e
+| n
+| g
++ t
++ h
+```
 
 #### 1.算法复杂度为 O(mn)
+第一种方法，也就是复杂度最高的，所有的可能性都计算一遍。   
+
 
 python实现：[diff_1.py](diff_1.py)
 
